@@ -1,0 +1,13 @@
+<h1>Lists</h1>
+
+<div id="card" class="card">
+  <% @lists.each do |list| %>
+    <%= list.name%>
+    <p>
+      <%= link_to "Show this list", list_path(list) %>
+    </p>
+  <% end %>
+</div>
+
+
+<button type="button" class="btn btn-warning"> <%= link_to "Add a List", new_list_path %> </button>
