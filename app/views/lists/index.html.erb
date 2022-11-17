@@ -1,13 +1,34 @@
-<h1>Lists</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.museumtv.art/wp-content/uploads/2021/09/denise-jans-Lq6rcifGjOU-unsplash-2048x1536.jpg);">
+  <div class="container">
+    <h1>🍿 Mes Listes de films </h1>
+    <br>
+    <br>
+    <p> 🎬<I> Créer en un click des listes pour trier vos films </I>  </p>
+    <br>
+    <button class="btn btn-outline-light btn-lg"> <%=link_to "A", new_list_path %> Add a List</button>
 
-<div id="card" class="card">
-  <% @lists.each do |list| %>
-    <%= list.name%>
-    <p>
-      <%= link_to "Show this list", list_path(list) %>
-    </p>
-  <% end %>
+  </div>
 </div>
 
 
-<button type="button" class="btn btn-warning"> <%= link_to "Add a List", new_list_path %> </button>
+
+
+ <div class="container1">
+    <% @lists.each do |list| %>
+     <div class="card-product">
+     <img src="https://fr.web.img3.acsta.net/medias/nmedia/18/36/12/88/18454857.jpg" />
+     <div class="card-product-infos">
+     <%= list.name%>
+
+     <button class="btn btn-outline-dark"> <%=link_to "D", list_path(list) %> Details </button>
+     </div>
+     </div>
+
+     <% end %>
+     </div>
+     <div>
+    </div>
+
+
+
+</div>
